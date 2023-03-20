@@ -1,0 +1,109 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(78, 35, 35, 0.425);
+}
+
+.box1 {
+  position: relative;
+  background-color: #61ab20;
+   
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  box-shadow: inset 0 0 3px #000;
+  border-radius: 5px;
+  border: 1px solid #111;
+  overflow: hidden;
+}
+
+.back {
+  display: block;
+  position: absolute;
+  -webkit-animation: moveX 3s linear 0s infinite alternate;
+  -moz-animation: moveX 3s linear 0s infinite alternate;
+  -o-animation: moveX 3s linear 0s infinite alternate;
+  animation: moveX 3s linear 0s infinite  ;
+  border-radius: 50px;
+
+  width: 300px;
+  height: 160px;
+  animation: moveX 3.05s linear 0s infinite alternate,
+    moveY 3.4s linear 0s infinite alternate;
+  /* animation: changeColor3 linear 3s steps(4) infinite; */
+}
+.smaller-img1 {
+  width: 300px;
+  height: 160px;
+}
+
+@-webkit-keyframes moveX {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 86%;
+  }
+}
+@-moz-keyframes moveX {
+   0% {
+    left: 0;
+  }
+  100% {
+    left:  86%;
+  }
+}
+@-o-keyframes moveX {
+    0% {
+        left: 0;
+      }
+      100% {
+        left:  86%;
+      }
+}
+@keyframes moveX {
+    0% {
+        left: 0;
+      }
+      100% {
+        left: 86%;
+      }
+}
+@-webkit-keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 84%;
+  }
+}
+@-moz-keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 84%;
+  }
+}
+@-o-keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 84%;
+  }
+}
+@keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 84%;
+  }
+}
+ 
+ 
+ 
