@@ -1,18 +1,28 @@
 function isAtEdge(element) {
+  const scrollIntoViewOptions = {'block': 'center', 'inline': 'center'};
+  const initialScrollY = window.scrollY;
+  element.scrollIntoView(scrollIntoViewOptions);
   const rect = element.getBoundingClientRect();
-
+  window.scrollTo(0, initialScrollY);
   const viewportWidth = window.innerWidth;
   const viewportHeight = window.innerHeight;
 
   return (
     rect.left <= 10 ||
     rect.top <= 10 ||
-    rect.right >= viewportWidth ||
-    rect.bottom >= viewportHeight
+    rect.right >= viewportWidth - 10 ||
+    rect.bottom >= viewportHeight - 10
   );
 }
+
 const box1 = document.querySelector(".back");
+const box2 = document.querySelector(".back2");
+const box3 = document.querySelector(".back3");
 function playSoundIfAtEdge(element, sound) {
+  if (!element) {
+    return;
+  }
+
   let random = Math.floor(Math.random() * 21);
   let color = [
     "#e6194b",
@@ -39,10 +49,15 @@ function playSoundIfAtEdge(element, sound) {
   ];
 
   if (isAtEdge(element)) {
-    sound.play();
+    const clonedSound = sound.cloneNode(true);
+    clonedSound.volume = 0.1;
+    clonedSound.play();
     box1.style.backgroundColor = `${color[random]}`;
+    box2.style.backgroundColor = `${color[random]}`;
+    box3.style.backgroundColor = `${color[random]}`;
   }
 }
+
 const sound = document.getElementById("sound");
 const img1 = document.querySelector(".smaller-img1");
 const img2 = document.querySelector(".smaller-img2");
@@ -56,4 +71,6 @@ function checkAndPlaySound() {
   playSoundIfAtEdge(img3, sound);
 }
 
-setInterval(checkAndPlaySound, 200);
+setInterval(checkAndPlaySound, 520);
+ 
+ 

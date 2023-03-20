@@ -10,7 +10,7 @@ body {
 .box1 {
   position: relative;
   background-color: #61ab20;
-   
+
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -18,6 +18,7 @@ body {
   border-radius: 5px;
   border: 1px solid #111;
   overflow: hidden;
+  perspective: 700px;
 }
 
 .back {
@@ -26,16 +27,64 @@ body {
   -webkit-animation: moveX 3s linear 0s infinite alternate;
   -moz-animation: moveX 3s linear 0s infinite alternate;
   -o-animation: moveX 3s linear 0s infinite alternate;
-  animation: moveX 3s linear 0s infinite  ;
+  animation: moveX 3s linear 0s infinite;
   border-radius: 50px;
 
   width: 300px;
   height: 160px;
   animation: moveX 3.05s linear 0s infinite alternate,
     moveY 3.4s linear 0s infinite alternate;
-  /* animation: changeColor3 linear 3s steps(4) infinite; */
+  transform: rotateX(45deg) rotateY(45deg) rotateZ(10deg);
 }
+.back2 {
+  display: block;
+  position: absolute;
+  -webkit-animation: moveX 7s linear 0s infinite alternate;
+  -moz-animation: moveX 7s linear 0s infinite alternate;
+  -o-animation: moveX 7s linear 0s infinite alternate;
+  animation: moveX 7s linear 0s infinite;
+  border-radius: 50px;
+
+  width: 300px;
+  height: 160px;
+  animation: moveX 7.05s linear 0s infinite alternate,
+    moveY 7.4s linear 0s infinite alternate;
+  transform: rotateX(45deg) rotateY(45deg) rotateZ(10deg);
+}
+.back3 {
+  display: block;
+  position: absolute;
+  -webkit-animation: moveX 2s linear 0s infinite alternate;
+  -moz-animation: moveX 2s linear 0s infinite alternate;
+  -o-animation: moveX 2s linear 0s infinite alternate;
+  animation: moveX 2s linear 0s infinite;
+  border-radius: 50px;
+
+  width: 300px;
+  height: 160px;
+  animation: moveX 2.05s linear 0s infinite alternate,
+    moveY 2.4s linear 0s infinite alternate;
+    transform: rotateX(45deg) rotateY(45deg) rotateZ(10deg);}
+.n3d1-1 {
+  transform: rotateX(45deg) rotateY(45deg) rotateZ(200px);
+}
+.n3d1-2 {
+  transform: rotateX(45deg) rotateY(45deg) rotateZ(400px);
+}
+
+.n3d1-3 {
+  transform: rotateX(45deg) rotateY(45deg) rotateZ(600px);
+}
+
 .smaller-img1 {
+  width: 300px;
+  height: 160px;
+}
+.smaller-img2 {
+  width: 300px;
+  height: 160px;
+}
+.smaller-img3 {
   width: 300px;
   height: 160px;
 }
@@ -49,28 +98,28 @@ body {
   }
 }
 @-moz-keyframes moveX {
-   0% {
+  0% {
     left: 0;
   }
   100% {
-    left:  86%;
+    left: 86%;
   }
 }
 @-o-keyframes moveX {
-    0% {
-        left: 0;
-      }
-      100% {
-        left:  86%;
-      }
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 86%;
+  }
 }
 @keyframes moveX {
-    0% {
-        left: 0;
-      }
-      100% {
-        left: 86%;
-      }
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 86%;
+  }
 }
 @-webkit-keyframes moveY {
   from {
@@ -104,6 +153,3 @@ body {
     top: 84%;
   }
 }
- 
- 
- 
