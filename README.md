@@ -1,7 +1,8 @@
 # Lecture-2-Homework-assignment
 
-1 # Instructions
-**Main task**
+# Instructions
+
+## Main task 
 
 Create an animation using HTML and CSS that reproduces the "screensaver" effect of an old DVD player, where a logo smoothly moves across the screen, bounces off the edge, and changes color.
 
